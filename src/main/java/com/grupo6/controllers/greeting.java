@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
-public class SaludoTeam6 {
-    @GetMapping("/SaludoTeam6")
-    public String saludo(){
-        return "Bienvenidos al Grupo 6 Compuesto por: Germán, Paulo y Kevin !";
-    }
+@RequestMapping("/api*")
+public class greeting {
+    @GetMapping("/greeting")
+public String saludo(){
+    return "Los demás grupos sin saludo.";
+}
+
 }
