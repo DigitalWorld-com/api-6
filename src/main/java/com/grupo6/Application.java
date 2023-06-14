@@ -18,7 +18,7 @@ public class Application {
 
         @Override
         public void addCorsMappings(CorsRegistry registry) {
-            registry.addMapping("/**")
+            registry.addMapping("/api6**")
                     .allowedOrigins("http://localhost:5173/")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("Authorization", "Content-Type")

@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class SaludoTeam6 {
     @GetMapping("/SaludoTeam6")
     public String saludo(){
-        return "Bienvenidos al Grupo 6 Compuesto por: Germán, Paulo!";
+        return "Bienvenidos al Grupo 6 Compuesto por: Germán, Paulo y Kevin !";
     }
 }
