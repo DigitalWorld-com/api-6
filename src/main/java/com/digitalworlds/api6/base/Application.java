@@ -20,7 +20,7 @@ public class Application {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:5173/")
                         .allowedHeaders("*")
-                        .allowedMethods("*")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
                         .exposedHeaders("*")
                         .maxAge(3600);
             }
