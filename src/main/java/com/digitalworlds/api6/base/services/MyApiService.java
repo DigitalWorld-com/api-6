@@ -14,7 +14,7 @@ public class MyApiService {
         this.restTemplate = restTemplate;
     }
 @Bean
-    public void consumirApi() {
+    public String consumirApi() {
         String apiUrl = "https://www.cultura.gob.ar/api/v2.0"; // Reemplaza con la URL de la API que deseas consumir
         String endpoint = "/museos/?limit=20"; // Reemplaza con el endpoint específico de la API
 
@@ -22,6 +22,7 @@ public class MyApiService {
         String response = restTemplate.getForObject(apiUrl + endpoint, String.class);
 
         // Procesa la respuesta de la API
-        System.out.println(response);
-    }
+       // System.out.println(response);
+    return response;
+}
 }
