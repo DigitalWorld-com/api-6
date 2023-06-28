@@ -1,5 +1,6 @@
 package com.digitalworlds.api6.base.controllers;
 
+import com.digitalworlds.api6.base.models.Objeto;
 import com.digitalworlds.api6.base.services.MyApiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class MyApiController {
     }
 
     @GetMapping("/museos")
-    public String consumeApi() {return
+    public Objeto consumeApi() {return
             myApiService.consumirApi();
         }
     }
