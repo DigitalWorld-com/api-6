@@ -18,11 +18,12 @@ public class  MyApiService {
     public MuseoObjectDTO consumirApi() {
         String apiUrl = "https://www.cultura.gob.ar/api/v2.0/museos/"; // Reemplaza con la URL de la API que deseas consumir
         String endpoint = "27";
-        //int endpoint = (int) Math.random(); // Reemplaza con el endpoint específico de la API
+
+
 
         // Realiza una solicitud GET a la API y obtén la respuesta en forma de una Objeto
 
-        //REVISAR PORQUE NO ME FUNCIONO CON @BUILDER()
+        //REVISAR PORQuE NO ME FUNCIONO CON @BUILDER()
         MuseoObjectDTO response = restTemplate.getForObject(apiUrl + endpoint, MuseoObjectDTO.class);
         MuseoObjectDTO mus = new MuseoObjectDTO();
         //MuseoObjectDTO mus = MuseoObjectDTO.builder().nombre(response.getNombre()).build();
