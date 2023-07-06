@@ -20,18 +20,10 @@ public class MyApiController {
         this.myApiService = myApiService;
     }
 
-    @GetMapping("/museos")
-    public MuseoObjectDTO consumeApi() {
-        return myApiService.consumirApi();
-        }
-
-
-    @GetMapping("/museo")
+      @GetMapping("/museo")
     public ResponseEntity<MuseoObjectDTO> getExternalData() throws JsonProcessingException {
         return ResponseEntity.ok(myApiService.consumirApi());
     }
-
-
 
     }
 

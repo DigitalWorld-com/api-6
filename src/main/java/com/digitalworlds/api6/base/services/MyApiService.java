@@ -1,7 +1,10 @@
 package com.digitalworlds.api6.base.services;
 
+import com.digitalworlds.api6.base.entities.MuseoDTO;
+import com.digitalworlds.api6.base.entities.MuseoEntity;
 import com.digitalworlds.api6.base.models.MuseoObjectDTO;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -9,7 +12,6 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class  MyApiService {
     private final RestTemplate restTemplate;
-
     public MyApiService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
@@ -33,4 +35,6 @@ public class  MyApiService {
         // System.out.println(response);
         return mus;
     }
+
+
 }
