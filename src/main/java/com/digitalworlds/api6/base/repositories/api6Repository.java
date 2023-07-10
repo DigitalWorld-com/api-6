@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface api6Entity extends JpaRepository<MuseoEntity,Long> {
+public interface api6Repository extends JpaRepository<MuseoEntity,Long> {
 }
