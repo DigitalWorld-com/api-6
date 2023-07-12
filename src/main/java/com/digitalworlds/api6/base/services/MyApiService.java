@@ -1,13 +1,11 @@
 package com.digitalworlds.api6.base.services;
 
-import com.digitalworlds.api6.base.entities.MuseoDTO;
-import com.digitalworlds.api6.base.entities.MuseoEntity;
 import com.digitalworlds.api6.base.models.MuseoObjectDTO;
-import lombok.ToString;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.SneakyThrows;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
 
 @Service
 public class  MyApiService {
@@ -19,9 +17,7 @@ public class  MyApiService {
     @Bean
     public MuseoObjectDTO consumirApi() {
         String apiUrl = "https://www.cultura.gob.ar/api/v2.0/museos/"; // Reemplaza con la URL de la API que deseas consumir
-        String endpoint = "27";
-
-
+        String endpoint = "28";
 
         // Realiza una solicitud GET a la API y obtén la respuesta en forma de una Objeto
 
@@ -34,6 +30,7 @@ public class  MyApiService {
 
         // Procesa la respuesta de la API
         // System.out.println(response);
+
         return mus;
     }
 
