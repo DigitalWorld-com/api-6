@@ -1,20 +1,18 @@
 package com.digitalworlds.api6.base.entities;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
-import javax.persistence.*;
 
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Entity(name = "API6")
-public class MuseoEntity {
-
+@Entity(name="Museos")
+public class MuseoEntity<M> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @Column(name = "pk", nullable = false)
+    private Long pk;
     private Long id;
     private String nombre;
 }
