@@ -11,4 +11,6 @@ public interface iMuseoService {
 
     List<MuseoDTO> getObjects();
 
+    void crearMuseo(Long id, String nombre);
+
 }

@@ -85,4 +85,16 @@ public class MuseoService implements iMuseoService {
         return museoEntity;
 
     }
+    @Override
+    public void crearMuseo(Long id, String nombre) {
+        MuseoEntity museoEntity = new MuseoEntity();
+        museoEntity.setId(id);
+        museoEntity.setNombre(nombre);
+        museoRepository.save(museoEntity);
+    }
+
+    public List<MuseoListIdNombre> museosTabla() {
+        List<MuseoListIdNombre> museoListIdNombres = new ArrayList<>();
+        return modeloMapeado.map(museoRepository.findAll(),museoListIdNombres.getClass());
+    }
 }
