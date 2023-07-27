@@ -29,7 +29,8 @@ public class MuseoController {
     public void postHello1() {
     }
 
-    @GetMapping("/museos_desde_url")
+    @GetMapping("/museos" +
+            "esde_url")
     public ResponseEntity<List<MuseoListIdNombre>> getData() throws JsonProcessingException {
         List<MuseoListIdNombre> museosIdNombreList = museoService.procesarLlamadaApi();
         return ResponseEntity.ok(museosIdNombreList);
